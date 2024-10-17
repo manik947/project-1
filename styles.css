@@ -1,120 +1,73 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #9b59b6;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #a3d89d, #004c00); /* Greenish background */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
-
 .form-container {
-    background-color: white;
-    width: 600px;
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-
-.registration-form {
-    width: 100%;
-}
-
 h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+    color: #fff;
 }
-
-.form-row {
+.form-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
-
-.form-group {
-    width: 48%;
-}
-
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #333;
+    width: 150px;
+    color: #fff;
 }
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    outline: none;
-    transition: border-color 0.3s;
+.form-group input {
+    width: 45%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
-
-input:focus {
-    border-color: #9b59b6;
-}
-
-.gender {
+.gender-group {
     display: flex;
     align-items: center;
+    justify-content: left;
     margin-bottom: 15px;
 }
-
-.gender-options {
-    display: flex;
-    margin-left: 15px;
+.gender-group label {
+    color: #fff;
+    margin-right: 10px;
 }
-
-.gender-options input[type="radio"] {
+.gender-group input {
     margin-right: 5px;
 }
-
-.gender-options label {
-    font-size: 14px;
-    margin-right: 15px;
-}
-
-.buttons {
+.button-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
 }
-
-button {
+.button-group button {
     padding: 10px 20px;
     border: none;
-    border-radius: 6px;
-    font-size: 14px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-size: 16px;
+    margin-right: 10px;
 }
-
-.cancel-btn {
-    background-color: #e74c3c;
+.button-group .cancel-btn {
+    background: linear-gradient(to right, #ff6e6e, #ff3333); /* Red gradient */
     color: white;
 }
-
-.cancel-btn:hover {
-    background-color: #c0392b;
-}
-
-.submit-btn {
-    background-color: #6e92f9;
+.button-group .submit-btn {
+    background: linear-gradient(to right, #33ccff, #0066ff); /* Blue gradient */
     color: white;
 }
-
-.submit-btn:hover {
-    background-color: #4d73f1;
+.button-group button:hover {
+    opacity: 0.8;
 }
