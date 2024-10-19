@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #a3d89d, #004c00); /* Greenish background */
+    background: linear-gradient(45deg, #a3d89d, #004c00);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ h2 {
 }
 .form-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     margin-bottom: 15px;
 }
 .form-group label {
@@ -29,27 +29,26 @@ h2 {
     color: #fff;
 }
 .form-group input {
-    width: 45%;
-    padding: 10px;
+    width: 25%;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 .gender-group {
+    text-align: left;
+    gap: 15px;
+}
+.radio-option {
     display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-bottom: 15px;
-}
-.gender-group label {
-    color: #fff;
-    margin-right: 10px;
-}
-.gender-group input {
-    margin-right: 5px;
+    align-items: left;
+  }
+
+label {
+    font-size: 16px;
 }
 .button-group {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 20px;
 }
 .button-group button {
@@ -61,11 +60,11 @@ h2 {
     margin-right: 10px;
 }
 .button-group .cancel-btn {
-    background: linear-gradient(to right, #ff6e6e, #ff3333); /* Red gradient */
+    background: linear-gradient(to right, #ff6e6e, #ff3333);
     color: white;
 }
 .button-group .submit-btn {
-    background: linear-gradient(to right, #33ccff, #0066ff); /* Blue gradient */
+    background: linear-gradient(to right, #33ccff, #0066ff);
     color: white;
 }
 .button-group button:hover {

@@ -1,58 +1,40 @@
 <?php
 function calculateResult($marks) {
-    foreach ($marks as $subject => $mark) {
+    foreach ($marks as $mark) {
         if ($mark < 0 || $mark > 100) {
-            echo "Mark range is invalid for $subject. Please enter marks between 0 and 100.<br>";
-            return;
+            return "Mark range is invalid.";
         }
     }
 
     foreach ($marks as $mark) {
         if ($mark < 33) {
-            echo "The student has failed.<br>";
-            return;
+            return "The student has failed.";
         }
     }
 
     $totalMarks = array_sum($marks);
     $averageMarks = $totalMarks / count($marks);
 
-    $grade = '';
-    switch (true) {
-        case ($averageMarks >= 80 && $averageMarks <= 100):
-            $grade = 'A+';
-            break;
-        case ($averageMarks >= 70 && $averageMarks < 80):
-            $grade = 'A';
-            break;
-        case ($averageMarks >= 60 && $averageMarks < 70):
-            $grade = 'A-';
-            break;
-        case ($averageMarks >= 50 && $averageMarks < 60):
-            $grade = 'B';
-            break;
-        case ($averageMarks >= 40 && $averageMarks < 50):
-            $grade = 'C';
-            break;
-        case ($averageMarks >= 33 && $averageMarks < 40):
-            $grade = 'D';
-            break;
-        default:
-            $grade = 'F';
-            break;
+    if ($averageMarks >= 80 && $averageMarks <= 100) {
+        $grade = "A+";
+    } elseif ($averageMarks >= 70 && $averageMarks <= 79) {
+        $grade = "A";
+    } elseif ($averageMarks >= 60 && $averageMarks <= 69) {
+        $grade = "A-";
+    } elseif ($averageMarks >= 50 && $averageMarks <= 59) {
+        $grade = "B";
+    } elseif ($averageMarks >= 40 && $averageMarks <= 49) {
+        $grade = "C";
+    } elseif ($averageMarks >= 33 && $averageMarks <= 39) {
+        $grade = "D";
+    } else {
+        $grade = "F";
     }
 
-    echo "Total Marks: $totalMarks";
-    echo "Average Marks: $averageMarks";
-    echo "Grade: $grade";
+    return "Total Marks: $totalMarks\nAverage Marks: " . number_format($averageMarks, 1) . "\nGrade: $grade";
 }
 
-$marks = [
-    'Subject1' => 40,
-    'Subject2' => 45,
-    'Subject3' => 50,
-    'Subject4' => 48,
-    'Subject5' => 49,
-];
+$marks = [45, 40, 50, 47, 50];
 
-calculateResult($marks);
+echo calculateResult($marks);
+

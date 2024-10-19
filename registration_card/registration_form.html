@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -34,13 +34,18 @@
 
         <div class="form-group gender-group">
             <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label>
+            <div class="radio-option">
+                <input type="radio" id="male" name="gender" value="male">Male
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="female" name="gender" value="female">Female
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="other" name="gender" value="other">Other
+            </div>
         </div>
+        
+        
 
         <div class="button-group">
             <button type="button" class="cancel-btn">Cancel</button>
