@@ -1,7 +1,5 @@
 <?php
-// Function to calculate total, average, and grade
 function calculateResult($marks) {
-    // Mark range validation for each subject
     foreach ($marks as $subject => $mark) {
         if ($mark < 0 || $mark > 100) {
             echo "Mark range is invalid for $subject. Please enter marks between 0 and 100.<br>";
@@ -9,7 +7,6 @@ function calculateResult($marks) {
         }
     }
 
-    // Check if the student has failed in any subject
     foreach ($marks as $mark) {
         if ($mark < 33) {
             echo "The student has failed.<br>";
@@ -17,11 +14,9 @@ function calculateResult($marks) {
         }
     }
 
-    // Calculate total and average marks
     $totalMarks = array_sum($marks);
     $averageMarks = $totalMarks / count($marks);
 
-    // Determine the grade using switch-case
     $grade = '';
     switch (true) {
         case ($averageMarks >= 80 && $averageMarks <= 100):
@@ -47,13 +42,11 @@ function calculateResult($marks) {
             break;
     }
 
-    // Output the result
     echo "Total Marks: $totalMarks";
     echo "Average Marks: $averageMarks";
     echo "Grade: $grade";
 }
 
-// Marks for five subjects that will result in a total of 232 and an average of 46.4
 $marks = [
     'Subject1' => 40,
     'Subject2' => 45,
@@ -62,6 +55,5 @@ $marks = [
     'Subject5' => 49,
 ];
 
-// Call the function to calculate the result
 calculateResult($marks);
 ?>
